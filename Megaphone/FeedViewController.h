@@ -1,0 +1,3 @@
+@interface FeedViewController : UITableViewController
+
+@end

@@ -1,0 +1,3 @@
+@interface FeedNavigationController : UINavigationController
+
+@end
