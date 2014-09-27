@@ -9,6 +9,8 @@
 #import "MButton.h"
 #import "AttendingUsersTableViewController.h"
 #import "Logger.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <Parse/Parse.h>
 
 @interface BroadcastDetailViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UIActionSheetDelegate, UIImagePickerControllerDelegate, TTTAttributedLabelDelegate, UIAlertViewDelegate>
 

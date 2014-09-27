@@ -5,6 +5,8 @@
 #import "BeaconService.h"
 #import "BaseUtils.h"
 #import "Logger.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <Parse/Parse.h>
 
 @interface BroadcastViewController () <BeaconServiceObserver,
 CreateBroadcastViewControllerDelegate,

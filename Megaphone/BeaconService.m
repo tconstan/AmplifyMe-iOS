@@ -1,6 +1,8 @@
 #import "BeaconService.h"
 #import "Logger.h"
 #import "Constants.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <Parse/Parse.h>
 
 @interface BeaconService () <CLLocationManagerDelegate>
 
@@ -29,6 +31,8 @@
     if (self = [super init]) {
         self.observers = [NSMutableSet set];
         self.locationManager = [[CLLocationManager alloc] init];
+        //iOS8 fix
+        [self.locationManager requestWhenInUseAuthorization];
         self.locationManager.delegate = self;
     }
     return self;

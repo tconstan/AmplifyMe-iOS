@@ -2,15 +2,22 @@
 #import "Logger.h"
 #import "BeaconService.h"
 #import "MButton.h"
+#import "TTTAttributedLabel.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
-@interface LoginViewController ()
+@interface LoginViewController () <TTTAttributedLabelDelegate>
 
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView *loadingIndicator;
 @property (weak, nonatomic) IBOutlet MButton *buttonLogin;
+@property (weak, nonatomic) IBOutlet TTTAttributedLabel *labelPrivacy;
 
 @end
 
 @implementation LoginViewController
+
+- (void)viewWillLayoutSubviews {
+    [self populateButton];
+}
 
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -20,6 +27,24 @@
     
     [self.view insertSubview:imageView atIndex:0];
     [self.buttonLogin showShadowAtBottom];
+}
+
+- (void)populateButton {
+//    [self.labelPrivacy setText:NSLocalizedString(@"See our privacy policy", nil)];
+//    NSRange textRange = [self.labelPrivacy.text rangeOfString:self.labelPrivacy.text];
+//    NSString *param = self.labelPrivacy.text;
+//    self.labelPrivacy.delegate = self;
+//    self.labelPrivacy.linkAttributes = @{ NSFontAttributeName : [UIFont boldSystemFontOfSize:self.labelPrivacy.font.pointSize],
+//                                          NSForegroundColorAttributeName: [UIColor whiteColor],
+//                                          NSUnderlineStyleAttributeName: [NSNumber numberWithInt:0] };
+//    [self.labelPrivacy addLinkToAddress: @{
+//                                           param : param
+//                                           }
+//                              withRange: textRange];
+}
+
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithAddress:(NSDictionary *)addressComponents {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://amplifymesupport.wordpress.com/privacy-policy/"]];
 }
 
 - (IBAction)loginTapped:(id)sender {

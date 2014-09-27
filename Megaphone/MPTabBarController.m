@@ -1,6 +1,7 @@
 #import "MPTabBarController.h"
 #import "BeaconService.h"
 #import "LoginViewController.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface MPTabBarController ()
 

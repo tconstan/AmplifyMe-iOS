@@ -8,6 +8,8 @@
 #import "UIColor+Megaphone.h"
 #import "Logger.h"
 #import "UserViewController.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <Parse/Parse.h>
 
 @interface FeedViewController () <BeaconServiceObserver, BeaconServiceDelegate, UIAlertViewDelegate>
 

@@ -4,6 +4,7 @@
 #import "MButton.h"
 #import "UIColor+Megaphone.h"
 #import "Logger.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface UserViewController () <NSURLConnectionDelegate, UIAlertViewDelegate>
 

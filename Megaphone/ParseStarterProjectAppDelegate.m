@@ -3,6 +3,7 @@
 
 #import "BeaconService.h"
 #import "Constants.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 @interface ParseStarterProjectAppDelegate ()
 

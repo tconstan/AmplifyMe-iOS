@@ -1,4 +1,6 @@
 #import "BroadcastAnnotation.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <Parse/Parse.h>
 
 @implementation BroadcastAnnotation
 
